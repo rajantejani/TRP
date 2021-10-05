@@ -88,7 +88,38 @@ export const navItems: INavData[] = [
         }
       ]
     },
-
+    {
+      name: 'Help',
+      url: '/help',
+      icon: 'icon-puzzle',
+      children: [
+        {
+          name: "FAQ Add" ,
+          url: '/help/faqadd',
+          icon: 'icon-puzzle'
+        },
+        {
+          name: "FAQ List" ,
+          url: '/help/faqlist',
+          icon: 'icon-puzzle'
+        },
+        {
+          name: "Report Piracy" ,
+          url: '/help/reportpiracy',
+          icon: 'icon-puzzle'
+        },
+        {
+          name: "Manuscript Submission" ,
+          url: '/help/manuscript-submission',
+          icon: 'icon-puzzle'
+        },
+        {
+          name: "Online Piracy Report Form" ,
+          url: '/help/online-piracy-report-form',
+          icon: 'icon-puzzle'
+        },
+      ]
+    },
   // {
   //   title: true,
   //   name: 'Theme'

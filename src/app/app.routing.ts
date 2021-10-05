@@ -81,6 +81,10 @@ export const routes: Routes = [
       {
         path: "about-us",
         loadChildren: () => import("./views/about-us/about-us.module").then(m => m.AboutUsModule)
+      },
+      {
+        path: "help",
+        loadChildren: () => import("./views/help/help.module").then(m => m.HelpModule)
       }
     ]
   },
