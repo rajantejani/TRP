@@ -1,0 +1,42 @@
+<div class="trp-main-container">
+    <div class="idva-taskbar">
+        <div class="row">
+            <div class="col-3 idva-flex">
+                <h1 class="trp-title">
+                    Storytime List
+                </h1>
+            </div>
+            <div class="col-6 idva-flex">
+                <ng-container *ngIf="selected !== null">
+                </ng-container>
+            </div>
+            <div class="col-3 text-right idva-flex idva-flex-end">
+                <a class="trp-add-button" [routerLink]="['/series/add']">Add Storytime</a>
+            </div>
+        </div>
+    </div>
+    <div class="trp-list-wrp">
+        <ul class="trp-list">
+            <li *ngFor="let i of [1,2,3,4,5,6]" class="trp-list-item">
+                <div class="trp-list-item-left">
+                    <div class="trp-list-item-img">
+                        <img src="https://cdn11.bigcommerce.com/s-639i6n96hu/product_images/uploaded_images/ss10-thumbnail.png"
+                            alt="thumbnail">
+                    </div>
+                    <div class="trp-list-item-info">
+                        <h2>WHAT'S NEXT?</h2>
+                        <p>Giggles and Grins</p>
+                    </div>
+                </div>
+                <div class="trp-list-item-right">
+                    <div>
+                        <input class="tgl tgl-light" (change)="selectFeatureSeries(i)" [checked]="featuredSeries===i"
+                            [attr.name]="'series-feature' + i" [attr.id]="'series-feature' + i" type="checkbox" />
+                        <label class="tgl-btn" [attr.for]="'series-feature' + i"></label>
+                    </div>
+                    <a class="idva-taskbar-icon" [routerLink]="['/series/add']"><i class="cil-eye"></i></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

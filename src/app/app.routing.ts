@@ -61,6 +61,14 @@ export const routes: Routes = [
       {
         path: "SteppingStones",
         loadChildren: () => import("./views/stepping-stones-list/stepping-stones-list.module").then(m => m.SteppingStonesListModule)
+      },
+      {
+        path: "book",
+        loadChildren: () => import("./views/books/books.module").then(m => m.BooksModule)
+      },
+      {
+        path: "storytime",
+        loadChildren: () => import("./views/storytime/storytime.module").then(m => m.StorytimeModule)
       }
     ]
   },

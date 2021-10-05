@@ -15,6 +15,16 @@ export const navItems: INavData[] = [
     name: "SteppingStones",
     url: "/SteppingStones",
     icon: "cil-list"
+  },
+  {
+    name: "Book",
+    url: "/book",
+    icon: "cil-list"
+  },
+  {
+    name: "Storytime",
+    url: "/storytime",
+    icon: "cil-list"
   }
   // {
   //   title: true,
