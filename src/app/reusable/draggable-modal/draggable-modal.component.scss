@@ -1,0 +1,18 @@
+.drag {
+  &-gable {
+    width: calc(100vw - 260px);
+    position: fixed;
+    cursor: move;
+  }
+  &-action {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    color: #000000;
+    z-index: 5;
+    font-size: 16px;
+  }
+}
+.smallPop {
+  max-width: 960px;
+}

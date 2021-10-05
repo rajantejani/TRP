@@ -1,0 +1,41 @@
+<div>
+	<div class="idva-taskbar">
+		<div class="row">
+			<div class="col-6 idva-flex idva-align">
+				<a class="idva-taskbar-icon idva-taskbar-icon-mr" [routerLink]="['/series']">
+					<i class="cis-arrow-left"></i>
+				</a>
+				<h1 class="trp-title">
+					Add Series
+				</h1>
+			</div>
+			<div class="col-6 text-right idva-flex idva-flex-end">
+				<div class="idva-taskbar-icon"><i class="cil-save"></i></div>
+				<div class="idva-taskbar-icon"><i class="cil-pencil"></i></div>
+				<div class="idva-taskbar-icon"><i class="cil-trash"></i></div>
+				<div class="idva-taskbar-icon"><i class="cil-save"></i></div>
+			</div>
+		</div>
+	</div>
+	<div class="trp-contain-wrp">
+		<app-banner-selection [selectedBanner]="selectedBanner" [updatedSelectedBanner]="updatedSelectedBanner"
+			[statusBannerModal]="statusBannerModal" [changeStatusBannerModal]="changeStatusBannerModal">
+		</app-banner-selection>
+		<br />
+		<div class="col">
+			<div class="row">
+				<div class="col-7">
+					<app-trp-contributor [contributerInfo]="contributerInfo"></app-trp-contributor>
+				</div>
+				<div class="col-5">
+					<app-trp-featured [featuredInfo]="featuredInfo"></app-trp-featured>
+				</div>
+			</div>
+		</div>
+		<br />
+		<app-trp-editorial [editorialInfo]="editorialInfo"></app-trp-editorial>
+		<br>
+		<app-series-list-form [feturedSeriesInfo]="feturedSeriesInfo"></app-series-list-form>
+		<br>
+	</div>
+</div>

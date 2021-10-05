@@ -1,0 +1,74 @@
+<app-trp-head [headTitle]="'Contributor'">
+    <div class="idva-taskbar-icon"><i class="cil-search"></i></div>
+</app-trp-head>
+<div class="trp-featured trp-box">
+    <div class=" trp-form-row row">
+        <div class="col-4">
+            Partner
+        </div>
+        <div class="col-4">
+            <input type="text" [disabled]="true" [(ngModel)]="contributerInfo.function" name="Function"
+                class="form-control" placeholder="Function">
+        </div>
+        <div class="col-4">
+            <input type="text" [disabled]="true" [(ngModel)]="contributerInfo.id" name="id" class="form-control"
+                placeholder="id">
+        </div>
+    </div>
+    <div class=" trp-form-row row">
+        <div class="col-4">
+            First Name
+        </div>
+        <div class="col-8">
+            <input type="text" [disabled]="true" [(ngModel)]="contributerInfo.firstName" name="firstName"
+                class="form-control" placeholder="First Name">
+        </div>
+    </div>
+    <div class=" trp-form-row row">
+        <div class="col-4">
+            Last Name
+        </div>
+        <div class="col-8">
+            <input type="text" [disabled]="true" [(ngModel)]="contributerInfo.lastName" name="lastName"
+                class="form-control" placeholder="Last Name">
+        </div>
+    </div>
+    <div class=" trp-form-row row">
+        <div class="col-4">
+            Company Name
+        </div>
+        <div class="col-8">
+            <input type="text" [disabled]="true" [(ngModel)]="contributerInfo.companyName" name="companyName"
+                class="form-control" placeholder="Company Name">
+        </div>
+    </div>
+    <div class=" trp-form-row row">
+        <div class="col-4">
+            Bio
+        </div>
+        <div class="col-8">
+            <textarea type="text" [(ngModel)]="contributerInfo.bio" name="bio" class="form-control" placeholder="Bio"
+                rows="3"></textarea>
+        </div>
+    </div>
+    <div class=" trp-form-row row">
+        <div class="col-4">
+            Portrait
+        </div>
+        <div class="col-8">
+            <div class="trp-featured-image">
+                <img src="https://firebasestorage.googleapis.com/v0/b/trp-mrk-frb-prod.appspot.com/o/giggles12.png?alt=media&token=66f43a7e-8eb9-4241-8137-4c4c274fcec4"
+                    alt="">
+            </div>
+        </div>
+    </div>
+    <div class=" trp-form-row row">
+        <div class="col-4">
+            Contributor
+        </div>
+        <div class="col-8">
+            <input type="text" [(ngModel)]="contributerInfo.contributor" name="contributor" class="form-control"
+                placeholder="Insert Link Here" rows="3">
+        </div>
+    </div>
+</div>

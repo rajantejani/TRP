@@ -1,0 +1,18 @@
+[class^="#{$coreui-duotone-icons-prefix}"],
+[class*=" #{$coreui-duotone-icons-prefix}"] {
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+  width: 1.33333333em;
+  height: 1em;
+  line-height: 1em;
+}
+
+@each $icon in $duotone-icons {
+  $icon-lower: to-lower-case(#{$icon});
+  .#{$coreui-duotone-icons-prefix}#{$icon-lower} {
+    background-image: url("#{$coreui-duotone-icons-path}/duotone/#{$coreui-duotone-icons-prefix}#{$icon}.svg");
+  }
+}

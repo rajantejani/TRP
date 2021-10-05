@@ -1,0 +1,374 @@
+// Here you can add other styles
+.idva {
+  &-flex {
+    display: flex;
+    &-end {
+      justify-content: flex-end;
+    }
+  }
+  &-justify {
+    justify-content: space-between;
+  }
+  &-justify-c {
+    justify-content: center;
+  }
+  &-align {
+    align-items: center;
+  }
+}
+
+.main {
+  background: #f9f9f9;
+}
+
+.idva-taskbar {
+  background: #f4f4f4;
+  margin: 0 0 4px;
+  padding: 6px 15px;
+  &-icon {
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    color: black !important;
+    text-decoration: none !important;
+    position: relative;
+    background: #f9f9f9;
+    transition: all ease 0.2s;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    &:hover {
+      background: #eaeaea;
+    }
+    &-btn {
+      cursor: pointer;
+      border: 1px solid #cccccc;
+      display: flex;
+      align-items: center;
+      padding: 2px 8px;
+      border-radius: unset;
+      font-size: 14px;
+      span {
+        font-size: 13px;
+        margin-left: 8px;
+      }
+    }
+    &.disabled {
+      pointer-events: none;
+      color: #cccccc !important;
+    }
+  }
+  .idva-taskbar-icon {
+    margin-left: 5px;
+    &-mr {
+      margin-right: 8px;
+      margin-left: 0 !important;
+    }
+  }
+}
+
+.inner-task-ribbon {
+  &.idva-taskbar-icon-mr {
+    background: #ffffff;
+  }
+}
+
+.trp {
+  &-title {
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 400;
+    margin-bottom: 0;
+    color: #000000;
+  }
+  &-add-button {
+    background: #ffffff;
+    padding: 5px 15px;
+    color: #666666;
+    border: 1px solid #666666;
+    transition: all ease 0.2s;
+    border-radius: 3px;
+    text-decoration: none !important;
+    &:hover {
+      color: #000000;
+      border: 1px solid #000000;
+      background: #f9f9f9;
+    }
+  }
+}
+
+.trp-banner {
+}
+
+.tgl-btn {
+  outline: 0;
+  display: block;
+  width: 3em;
+  height: 1.5em;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  &:after,
+  &:before {
+    position: relative;
+    display: block;
+    content: "";
+    width: 50%;
+    height: 100%;
+  }
+
+  &:after {
+    left: 0;
+  }
+
+  &:before {
+    display: none;
+  }
+}
+
+// themes
+.tgl-light {
+  display: none;
+  + .tgl-btn {
+    background: #cccccc;
+    border-radius: 1.5em;
+    padding: 2px;
+    transition: all 0.4s ease;
+    margin-bottom: 0;
+    &:after {
+      border-radius: 50%;
+      background: #fff;
+      transition: all 0.2s ease;
+    }
+  }
+
+  &:checked + .tgl-btn {
+    background: #9fd6ae;
+  }
+  &:checked + .tgl-btn:after {
+    left: 50%;
+  }
+}
+
+.detect {
+  width: 5px;
+  height: 5px;
+  background: black;
+}
+
+.trp-list {
+  padding: 0;
+  margin: 0;
+  &-wrp {
+    padding: 15px;
+    height: calc(100vh - 155px);
+    overflow: auto;
+  }
+  &-item {
+    display: flex;
+    padding: 10px;
+    background: #ffffff;
+    box-shadow: 0 0 3px 0px #0000004d;
+    border-radius: 1px;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:hover {
+      box-shadow: 0 0 4px 1px #0000004d;
+    }
+    &-img {
+      width: 33%;
+      padding-bottom: 14.05%;
+      height: 0;
+      position: relative;
+      max-width: 200px;
+      img {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+      }
+    }
+    &-info {
+      padding-left: 15px;
+      h2 {
+        font-size: 16px;
+        margin-bottom: 3px;
+      }
+      p {
+        font-size: 14px;
+        margin-bottom: 0;
+      }
+    }
+    &-icon {
+    }
+    &-left {
+      display: flex;
+      flex-grow: 1;
+    }
+    &-right {
+      text-align: right;
+      justify-content: flex-end;
+      display: flex;
+      align-items: baseline;
+      & > div {
+        margin-right: 8px;
+      }
+    }
+  }
+}
+.trp-head {
+  margin: 10px 0;
+  border-bottom: 1px solid #d3273f;
+  border-top: 1px solid #d3273f;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  min-height: 42px;
+  h3 {
+    padding: 8px 0;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 0;
+  }
+}
+
+.trp {
+  &-contain {
+    &-wrp {
+      height: calc(100vh - 162px);
+      overflow: auto;
+    }
+  }
+}
+
+.trp-banner {
+  padding: 0 15px;
+  &-preview {
+    width: 100%;
+    height: 0;
+    padding-bottom: 25%;
+    position: relative;
+    background: #ffffff;
+    border: 1px solid #efefef;
+    border-radius: 2px;
+    box-shadow: 0 0 3px 0px #00000033;
+    img,
+    &-no {
+      width: 100%;
+      position: absolute;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      top: 0;
+      left: 0;
+    }
+    &-no {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      p {
+        margin-bottom: 0;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.modal-dialog-scrollable {
+  max-width: calc(100% - 400px) !important;
+  .modal-content {
+    max-height: unset !important;
+    background: transparent;
+    border: none;
+  }
+  .modal-body {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+}
+.cat-normal-btn {
+  border: none;
+  height: 35px;
+  padding: 5px 20px;
+}
+
+.trp-pop-body {
+  overflow: auto;
+  max-height: calc(100vh - 140px);
+  padding: 0 15px;
+}
+
+.trp-form-row {
+  margin-bottom: 15px;
+}
+
+.trp-box {
+  background: #ffffff;
+  border: 1px solid #efefef;
+  border-radius: 2px;
+  box-shadow: 0 0 3px 0px #00000033;
+}
+
+.trp {
+  &-featured {
+    padding: 15px 15px 0;
+    &-image {
+      position: relative;
+      height: 0;
+      padding-bottom: 56.25%;
+      img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+      }
+    }
+  }
+}
+.trp-form-list {
+  padding: 15px;
+
+  &-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &-image {
+      width: 100px;
+      height: 70px;
+      margin-right: 10px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &-wrp {
+      display: flex;
+      flex-grow: 1;
+      &-info {
+        h3 {
+          margin-bottom: 5px;
+        }
+        p {
+          margin-bottom: 0;
+        }
+      }
+    }
+    &-option {
+      display: flex;
+    }
+  }
+}

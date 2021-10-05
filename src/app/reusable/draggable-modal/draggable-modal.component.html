@@ -1,0 +1,8 @@
+<div #box class="drag-gable" [class.active]="status === 1 || status === 2"
+  [style.transform]="'translate3d(' + left + 'px,' + top + 'px,' + '0px)'" (mousedown)="setStatus($event, 2)"
+  (window:mouseup)="setStatus($event, 0)" [class.smallPop]="small">
+  <!-- <div class="drag-action">
+    <i class="cil-cursor-move"></i>
+  </div> -->
+  <ng-content></ng-content>
+</div>

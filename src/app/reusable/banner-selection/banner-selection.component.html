@@ -1,0 +1,154 @@
+<div class="trp-banner">
+  <app-trp-head [headTitle]="'Active Banner'">
+    <ng-container *ngIf="selectedBanner">
+      <div class="idva-taskbar-icon" (click)="changeStatusBannerModal(!statusBannerModal)"><i class="cil-pencil"></i>
+      </div>
+    </ng-container>
+  </app-trp-head>
+  <div class="trp-banner-preview">
+    <div class="trp-banner-preview-no" *ngIf="!selectedBanner" (click)="changeStatusBannerModal(!statusBannerModal)">
+      <p>Please click here to select the banner</p>
+    </div>
+    <img *ngIf="selectedBanner"
+      src="https://firebasestorage.googleapis.com/v0/b/trp-mrk-frb-prod.appspot.com/o/giggles12.png?alt=media&token=66f43a7e-8eb9-4241-8137-4c4c274fcec4"
+      alt="">
+  </div>
+</div>
+<div bsModal #bannerModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-xl custom-modal modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <app-draggable-modal [left]="30" [top]="0">
+        <div class="modal-body">
+          <button type="button" class="close" (click)="bannerModal.hide()" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <app-trp-head [headTitle]="'Select Banner'"></app-trp-head>
+          <div class="trp-pop-body">
+            <div class="row">
+              <div *ngFor="let level of levelArr;index as i" class="col-3">
+                <div class="row">
+                  <div class="col-4 idva-flex idva-align">{{i===0?'Property:':'level ' + (i+1)}}</div>
+                  <div class="col-8">
+                    <select [(ngModel)]="levelAns[i]" (change)="levelSelection($event,i)" name="title"
+                      class="form-control">
+                      levelAns
+                      <option *ngFor="let cat of level; index as j" value="{{j}}">
+                        {{cat.name}}
+                      </option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br />
+            <div class="row">
+              <div class="col-6">
+                <div class="row">
+                  <div class="col-2 idva-flex idva-align">Image:</div>
+                  <div class="col-10 idva-flex idva-align">
+                    <select [(ngModel)]="imageType" [disabled]="!unlockView" name="imageType" class="form-control">
+                      <option value="Th">Th - Thumbnail</option>
+                      <option value="EV">EV - Expanded View</option>
+                      <option value="HV">HV - Hover View</option>
+                      <option value="FI">FI - Featured Image</option>
+                      <option value="FQ">FQ - Featured Quizzle</option>
+                      <option value="MC">MC - Medium Cover</option>
+                      <option value="PC">PC - Puzzle Cover</option>
+                      <option value="JP">JP - Jigsaw Puzzle</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="row">
+                  <div class="col-4 idva-flex idva-align">Resolution:</div>
+                  <div class="col-8">
+                    <select [(ngModel)]="resolution" name="resolution" [disabled]="!unlockView" class="form-control">
+                      <option value="16*16">16*16</option>
+                      <option value="32*32">32*32</option>
+                      <option value="64*64">64*64</option>
+                      <option value="128*128">128*128</option>
+                      <option value="256*256">256*256</option>
+                      <option value="512*512">512*512</option>
+                      <option value="1024*1024">1024*1024</option>
+                      <option value="2024*2024">2024*2024</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <button class="cat-normal-btn" *ngIf="resolution && imageType" (click)="view = true">View</button>
+              </div>
+            </div>
+            <br />
+            <ng-container *ngIf="view">
+              <div *ngFor="let viewType of viewArray" class="row">
+                <ng-container *ngIf="imageType === viewType || imageType === 'view-all'">
+                  <div class="col-12">
+                    <div class="idva-imc-h">{{ viewType }}</div>
+                  </div>
+                  <div class="col-12">
+                    <div class="idva-imc-can">
+                      <div *ngIf="resolution === '16*16' || resolution === 'view-all'" style="width: 0.7889546351%">
+                        <span class="idva-imc-lab">16*16</span>
+                        <img
+                          src="https://firebasestorage.googleapis.com/v0/b/trp-mrk-frb-prod.appspot.com/o/giggles12.png?alt=media&token=66f43a7e-8eb9-4241-8137-4c4c274fcec4"
+                          alt="" />
+                      </div>
+                      <div *ngIf="resolution === '32*32' || resolution === 'view-all'" style="width: 1.57790927%">
+                        <span class="idva-imc-lab">32*32</span>
+                        <img
+                          src="https://firebasestorage.googleapis.com/v0/b/trp-mrk-frb-prod.appspot.com/o/giggles12.png?alt=media&token=66f43a7e-8eb9-4241-8137-4c4c274fcec4"
+                          alt="" />
+                      </div>
+                      <div *ngIf="resolution === '64*64' || resolution === 'view-all'" style="width: 3.15581854%">
+                        <span class="idva-imc-lab">64*64</span>
+                        <img
+                          src="https://firebasestorage.googleapis.com/v0/b/trp-mrk-frb-prod.appspot.com/o/giggles12.png?alt=media&token=66f43a7e-8eb9-4241-8137-4c4c274fcec4"
+                          alt="" />
+                      </div>
+                      <div *ngIf="resolution === '128*128' || resolution === 'view-all'" style="width: 4.15581854%">
+                        <span class="idva-imc-lab">128*128</span>
+                        <img
+                          src="https://firebasestorage.googleapis.com/v0/b/trp-mrk-frb-prod.appspot.com/o/giggles12.png?alt=media&token=66f43a7e-8eb9-4241-8137-4c4c274fcec4"
+                          alt="" />
+                      </div>
+                      <div *ngIf="resolution === '256*256' || resolution === 'view-all'" style="width: 6.311637081%">
+                        <span class="idva-imc-lab">256*256</span>
+                        <img
+                          src="https://firebasestorage.googleapis.com/v0/b/trp-mrk-frb-prod.appspot.com/o/giggles12.png?alt=media&token=66f43a7e-8eb9-4241-8137-4c4c274fcec4"
+                          alt="" />
+                      </div>
+                      <div *ngIf="resolution === '512*512' || resolution === 'view-all'" style="width: 10.62327416%">
+                        <span class="idva-imc-lab">512*512</span>
+                        <img
+                          src="https://firebasestorage.googleapis.com/v0/b/trp-mrk-frb-prod.appspot.com/o/giggles12.png?alt=media&token=66f43a7e-8eb9-4241-8137-4c4c274fcec4"
+                          alt="" />
+                      </div>
+                      <div *ngIf="resolution === '1024*1024' || resolution === 'view-all'" style="width: 22.24654832%">
+                        <span class="idva-imc-lab">1024*1024</span>
+                        <img
+                          src="https://firebasestorage.googleapis.com/v0/b/trp-mrk-frb-prod.appspot.com/o/giggles12.png?alt=media&token=66f43a7e-8eb9-4241-8137-4c4c274fcec4"
+                          alt="" />
+                      </div>
+                      <div *ngIf="resolution === '2024*2024' || resolution === 'view-all'" style="width: 45.90138067%">
+                        <span class="idva-imc-lab">2024*2024</span>
+                        <img
+                          src="https://firebasestorage.googleapis.com/v0/b/trp-mrk-frb-prod.appspot.com/o/giggles12.png?alt=media&token=66f43a7e-8eb9-4241-8137-4c4c274fcec4"
+                          alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </ng-container>
+              </div>
+            </ng-container>
+            <div class="text-right" *ngIf="view">
+              <button style="margin-top: 15px;" class="cat-normal-btn" (click)="selectBanner()">Select</button>
+            </div>
+          </div>
+        </div>
+      </app-draggable-modal>
+    </div>
+  </div>
+</div>

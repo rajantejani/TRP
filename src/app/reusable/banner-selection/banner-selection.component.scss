@@ -1,0 +1,21 @@
+.idva-imc {
+  &-h {
+    background-color: #ffffff;
+  }
+  &-can {
+    background: #525e66;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  &-lab {
+    color: #ffffff;
+    display: block;
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+}

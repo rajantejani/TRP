@@ -1,0 +1,47 @@
+<app-trp-head [headTitle]="'Featured'">
+  <div>
+    <input class="tgl tgl-light" [(ngModel)]="featuredInfo.featured" [attr.name]="'featurered' + i"
+      [attr.id]="'featurered' + i" type="checkbox" />
+    <label class="tgl-btn" [attr.for]="'featurered' + i"></label>
+  </div>
+</app-trp-head>
+<div class="trp-featured trp-box">
+  <div class=" trp-form-row row">
+    <div class="col-4">
+      image:
+    </div>
+    <div class="col-8">
+      <div class="trp-featured-image">
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/trp-mrk-frb-prod.appspot.com/o/giggles12.png?alt=media&token=66f43a7e-8eb9-4241-8137-4c4c274fcec4"
+          alt="">
+      </div>
+    </div>
+  </div>
+  <div class=" trp-form-row row">
+    <div class="col-4">
+      Slogan:
+    </div>
+    <div class="col-8">
+      <input type="text" [(ngModel)]="featuredInfo.slogan" name="slogan" class="form-control" placeholder="Slogan">
+    </div>
+  </div>
+  <div class=" trp-form-row row">
+    <div class="col-4">
+      Sub Heading:
+    </div>
+    <div class="col-8">
+      <input type="text" [(ngModel)]="featuredInfo.subHeading" name="subHeading" class="form-control"
+        placeholder="Sub Heading">
+    </div>
+  </div>
+  <div class=" trp-form-row row">
+    <div class="col-4">
+      Featured:
+    </div>
+    <div class="col-8">
+      <input type="text" [(ngModel)]="featuredInfo.subHeading" name="subHeading" class="form-control"
+        placeholder="Insert Link Here">
+    </div>
+  </div>
+</div>

@@ -1,0 +1,244 @@
+<div bsModal #myModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl custom-modal modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <app-draggable-modal [left]="30" [top]="0" [small]="true">
+        <div class="modal-body">
+          <button type="button" class="close" (click)="myModal.hide()" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <tabset *ngIf="!results">
+            <tab>
+              <ng-template tabHeading>Title &nbsp; </ng-template>
+              <div class="row mb-2">
+                <div class="col-2">Title</div>
+                <div class="col-10">
+                  <input type="text" class="form-control" placeholder="title" />
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-2">Edition</div>
+                <div class="col-10">
+                  <select class="form-control">
+                    <option *ngFor="let edition of editionList" value="{{ edition.id }}">
+                      {{ edition.name }}
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-2">Language</div>
+                <div class="col-10">
+                  <select class="form-control">
+                    <option *ngFor="let language of languages" value="{{ language.id }}">{{ language.id }} - {{ language.name }}</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-2">Country</div>
+                <div class="col-10">
+                  <select class="form-control">
+                    <option *ngFor="let country of countries" value="{{ country.id }}">{{ country.id }} - {{ country.name }}</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-2">Series ID</div>
+                <div class="col-10">
+                  <select class="form-control">
+                    <option *ngFor="let title of titles" value="{{ title }}">{{ title }}</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-2">Series</div>
+                <div class="col-10">
+                  <input type="text" class="form-control" placeholder="Series" />
+                </div>
+              </div>
+            </tab>
+            <tab>
+              <ng-template tabHeading>Character &nbsp; </ng-template>
+              <div class="row mb-2">
+                <div class="col-2">Character Name</div>
+                <div class="col-10">
+                  <input type="text" class="form-control" placeholder="Character Name" />
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-2">Character ID</div>
+                <div class="col-10">
+                  <select class="form-control">
+                    <option *ngFor="let title of titles" value="{{ title }}">{{ title }} - {{ title }}</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-2">Series</div>
+                <div class="col-10">
+                  <input type="text" class="form-control" placeholder="Series" />
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-2">Title</div>
+                <div class="col-10">
+                  <input type="text" class="form-control" placeholder="Title" />
+                </div>
+              </div>
+            </tab>
+            <tab>
+              <ng-template tabHeading>Partner &nbsp; </ng-template>
+              <div class="row mb-2">
+                <div class="col-2">Partner Id</div>
+                <div class="col-10">
+                  <select class="form-control">
+                    <option *ngFor="let title of titles" value="{{ title }}">{{ title }}</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-2">First Name</div>
+                <div class="col-10">
+                  <input type="text" class="form-control" placeholder="First Name" />
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-2">Last Name</div>
+                <div class="col-10">
+                  <input type="text" class="form-control" placeholder="Last Name" />
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-2">Company</div>
+                <div class="col-10">
+                  <input type="text" class="form-control" placeholder="Company" />
+                </div>
+              </div>
+            </tab>
+            <tab>
+              <ng-template tabHeading>ISBN &nbsp; </ng-template>
+              <div class="row mb-2">
+                <div class="col-2">ISBN10</div>
+                <div class="col-10">
+                  <select class="form-control">
+                    <option *ngFor="let isbn of isbns" value="{{ isbn }}">{{ isbn }}</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-2">ISBN13</div>
+                <div class="col-10">
+                  <select class="form-control">
+                    <option *ngFor="let isbn of isbns" value="{{ isbn }}">{{ isbn }}</option>
+                  </select>
+                </div>
+              </div>
+            </tab>
+            <tab>
+              <ng-template tabHeading>Content&nbsp; </ng-template>
+              <div class="row mb-2">
+                <div class="col-2">Division</div>
+                <div class="col-10">
+                  <select class="form-control">
+                    <option *ngFor="let detail of divisions" value="{{ detail.id }}">{{ detail.id }} - {{ detail.description }}</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-2">Content Format</div>
+                <div class="col-10">
+                  <select class="form-control">
+                    <option *ngFor="let contentFormat of contentFormats" value="{{ contentFormat.id }}">
+                      {{ contentFormat.id }} - {{ contentFormat.description }}
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-2">File Format</div>
+                <div class="col-10">
+                  <select class="form-control">
+                    <option *ngFor="let fileFormat of fileFormats" value="{{ fileFormat.id }}">
+                      {{ fileFormat.id }} - {{ fileFormat.description }}
+                    </option>
+                  </select>
+                </div>
+              </div>
+            </tab>
+            <tab>
+              <ng-template tabHeading>Enrichment &nbsp; </ng-template>
+              <div class="row mb-2">
+                <div class="col-2">Enrichment</div>
+                <div class="col-10 enrich-drop">
+                  <angular2-multiselect
+                    *ngIf="beingEdited === i"
+                    [data]="enrichmentsList"
+                    [(ngModel)]="selectedEnrichments"
+                    [settings]="dropdownSettings"
+                  ></angular2-multiselect>
+                </div>
+              </div>
+            </tab>
+            <tab>
+              <ng-template tabHeading>Genre&nbsp; </ng-template>
+              <div class="row mb-2">
+                <div class="col-2">Genre</div>
+                <div class="col-10">
+                  <select class="form-control">
+                    <option value="Books">Books</option>
+                    <option value="Video">Video</option>
+                    <option value="Music">Music</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-2">Search Term</div>
+                <div class="col-10">
+                  <input type="text" class="form-control" placeholder="Search Term" />
+                </div>
+              </div>
+            </tab>
+          </tabset>
+          <div *ngIf="!results" class="row">
+            <div class="col-12 text-right">
+              <button class="find" (click)="findResults()">Find</button>
+            </div>
+          </div>
+          <div *ngIf="results && results.length">
+            <div *ngIf="results" class="row">
+              <div class="col-6">
+                <p style="font-weight: bold; font-size: 16px">Search results</p>
+              </div>
+              <div class="col-6 text-right">
+                <button class="find find-select" (click)="myModal.hide()">Select All</button>
+              </div>
+            </div>
+            <div class="find-r-w">
+              <div class="row find-r-h">
+                <div class="col-2">
+                  <p>Title Id</p>
+                </div>
+                <div class="col-8">
+                  <p>Title</p>
+                </div>
+                <div class="col-2 text-right"></div>
+              </div>
+              <div class="find-r-b-w">
+                <div class="row find-r-b" *ngFor="let result of results">
+                  <div class="col-2">
+                    <p>{{ result.title_id }}</p>
+                  </div>
+                  <div class="col-8">
+                    <p>{{ result.title }}</p>
+                  </div>
+                  <div class="col-2 text-right">
+                    <button class="find find-select" (click)="myModal.hide()">Select</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </app-draggable-modal>
+    </div>
+  </div>
+</div>
