@@ -69,6 +69,10 @@ export const routes: Routes = [
       {
         path: "storytime",
         loadChildren: () => import("./views/storytime/storytime.module").then(m => m.StorytimeModule)
+      },
+      {
+        path: "blog",
+        loadChildren: () => import("./views/blog/blog.module").then(m => m.BlogModule)
       }
     ]
   },

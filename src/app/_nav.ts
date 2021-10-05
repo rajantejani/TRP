@@ -25,6 +25,11 @@ export const navItems: INavData[] = [
     name: "Story time",
     url: "/storytime",
     icon: "cil-list"
+  },
+  {
+    name: "Blog",
+    url: "/blog",
+    icon: "cil-list"
   }
   // {
   //   title: true,
