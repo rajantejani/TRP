@@ -2,13 +2,17 @@
   &-wrp {
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     background: #00000066;
     display: flex;
     justify-content: flex-end;
-    width: 100%;
+    width: 0;
     height: 100%;
     z-index: 1020;
+    transition: all ease 0.5s;
+    .active {
+      width: 100%;
+    }
   }
   width: 100%;
   max-width: 400px;
@@ -16,14 +20,16 @@
   overflow: auto;
   background: #ffffff;
   &-content {
-    height: calc(100% - 62px);
+    height: calc(100% - 52px);
   }
   &-buttons {
     padding: 10px;
     text-align: right;
+    border-top: 1px solid #cccccc;
     button {
       border: none;
-      padding: 10px 15px;
+      padding: 5px 15px;
+      margin-left: 10px;
     }
   }
 }

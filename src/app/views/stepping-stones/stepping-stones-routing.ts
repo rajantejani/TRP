@@ -1,8 +1,7 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { SteppingStonesListAddComponent } from './stepping-stones-list-add/stepping-stones-list-add.component';
-import { SteppingStonesListListComponent } from './stepping-stones-list-list/stepping-stones-list-list.component';
-
+import { SteppingStonesListAddComponent } from "./stepping-stones-add/stepping-stones-add.component";
+import { SteppingStonesListListComponent } from "./stepping-stones-list/stepping-stones-list.component";
 
 const routes: Routes = [
   {

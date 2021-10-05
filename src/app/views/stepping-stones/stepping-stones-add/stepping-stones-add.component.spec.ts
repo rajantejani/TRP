@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SteppingStonesListAddComponent } from './stepping-stones-list-add.component';
+import { SteppingStonesListAddComponent } from './stepping-stones-add.component';
 
 describe('SteppingStonesListAddComponent', () => {
   let component: SteppingStonesListAddComponent;

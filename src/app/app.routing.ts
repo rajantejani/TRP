@@ -60,7 +60,7 @@ export const routes: Routes = [
       },
       {
         path: "SteppingStones",
-        loadChildren: () => import("./views/stepping-stones-list/stepping-stones-list.module").then(m => m.SteppingStonesListModule)
+        loadChildren: () => import("./views/stepping-stones/stepping-stones.module").then(m => m.SteppingStonesListModule)
       },
       {
         path: "book",

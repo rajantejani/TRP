@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SteppingStonesListFormComponent } from './stepping-stones-list-form.component';
+import { SteppingStonesListFormComponent } from './stepping-stones-form.component';
 
 describe('SteppingStonesListFormComponent', () => {
   let component: SteppingStonesListFormComponent;
