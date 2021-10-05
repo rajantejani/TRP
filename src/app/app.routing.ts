@@ -59,7 +59,7 @@ export const routes: Routes = [
         loadChildren: () => import("./views/series/series.module").then(m => m.SeriesModule)
       },
       {
-        path: "SteppingStones",
+        path: "steppingstones",
         loadChildren: () => import("./views/stepping-stones/stepping-stones.module").then(m => m.SteppingStonesListModule)
       },
       {
