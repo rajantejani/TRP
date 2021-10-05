@@ -12,8 +12,8 @@ export const navItems: INavData[] = [
     icon: "cil-list"
   },
   {
-    name: "SteppingStones",
-    url: "/SteppingStones",
+    name: "Stepping Stones",
+    url: "/steppingstones",
     icon: "cil-list"
   },
   {
@@ -22,7 +22,7 @@ export const navItems: INavData[] = [
     icon: "cil-list"
   },
   {
-    name: "Storytime",
+    name: "Story time",
     url: "/storytime",
     icon: "cil-list"
   }
