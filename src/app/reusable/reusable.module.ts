@@ -11,6 +11,7 @@ import { TrpContributorComponent } from "./trp-contributor/trp-contributor.compo
 import { TrpEditorialComponent } from "./trp-editorial/trp-editorial.component";
 import { AngularEditorModule } from "@kolkov/angular-editor";
 import { HttpClientModule } from "@angular/common/http";
+import { TrpSideModalComponent } from "./trp-side-modal/trp-side-modal.component";
 
 @NgModule({
   declarations: [
@@ -19,9 +20,18 @@ import { HttpClientModule } from "@angular/common/http";
     DraggableModalComponent,
     TrpFeaturedComponent,
     TrpContributorComponent,
-    TrpEditorialComponent
+    TrpEditorialComponent,
+    TrpSideModalComponent
   ],
   imports: [CommonModule, ReusableRoutingModule, FormsModule, ModalModule.forRoot(), AngularEditorModule, HttpClientModule],
-  exports: [BannerSelectionComponent, TrpHeadComponent, DraggableModalComponent, TrpFeaturedComponent, TrpContributorComponent, TrpEditorialComponent]
+  exports: [
+    BannerSelectionComponent,
+    TrpHeadComponent,
+    DraggableModalComponent,
+    TrpFeaturedComponent,
+    TrpContributorComponent,
+    TrpEditorialComponent,
+    TrpSideModalComponent
+  ]
 })
 export class ReusableModule {}

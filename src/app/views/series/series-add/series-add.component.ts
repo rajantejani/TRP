@@ -38,6 +38,7 @@ export class SeriesAddComponent implements OnInit {
   };
 
   feturedSeriesInfo: SeriesInfoInterface = {
+    title: "",
     Sequence: "",
     image: "",
     seriesId: "",
