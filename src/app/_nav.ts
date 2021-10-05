@@ -7,8 +7,13 @@ export const navItems: INavData[] = [
     icon: "icon-speedometer"
   },
   {
-    name: "Series",
-    url: "/series",
+    name: "Home",
+    url: "/home",
+    icon: "cil-list"
+  },
+  {
+    name: "Books",
+    url: "/book",
     icon: "cil-list"
   },
   {
@@ -17,10 +22,10 @@ export const navItems: INavData[] = [
     icon: "cil-list"
   },
   {
-    name: "Book",
-    url: "/book",
+    name: "Series",
+    url: "/series",
     icon: "cil-list"
-  },
+  }, 
   {
     name: "Story time",
     url: "/storytime",
@@ -30,7 +35,60 @@ export const navItems: INavData[] = [
     name: "Blog",
     url: "/blog",
     icon: "cil-list"
-  }
+  },
+  {
+      name: 'About Us',
+      url: '/about-us',
+      icon: 'icon-puzzle',
+      children: [
+        {
+          name: 'About List',
+          url: '/about-us/about-info',
+          icon: 'icon-puzzle'
+        },
+        {
+          name: 'Editorial Team',
+          url: '/about-us/editorialteam',
+          icon: 'icon-puzzle'
+        },
+        {
+          name: 'Art Director Team' ,
+          url: '/about-us/artdirectorteam',
+          icon: 'icon-puzzle'
+        },
+        {
+          name: 'Animation Team' ,
+          url: '/about-us/animationteam',
+          icon: 'icon-puzzle'
+        },
+        {
+          name: 'Development Team' ,
+          url: '/about-us/developmentteam',
+          icon: 'icon-puzzle'
+        },
+        {
+          name: 'Administration Team' ,
+          url: '/about-us/administrationteam',
+          icon: 'icon-puzzle'
+        },
+        {
+          name: 'Leadership Team' ,
+          url: '/about-us/leadershipteam',
+          icon: 'icon-puzzle'
+        },
+        {
+          name: 'Leadership Team' ,
+          url: '/about-us/leadership',
+          icon: 'icon-puzzle'
+        },
+        {
+          name: 'News' ,
+          url: '/about-us/news',
+          icon: 'icon-puzzle'
+        }
+      ]
+    },
+
   // {
   //   title: true,
   //   name: 'Theme'
