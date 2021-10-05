@@ -8,7 +8,12 @@ export const navItems: INavData[] = [
   },
   {
     name: "Series",
-    url: "/series/add",
+    url: "/series",
+    icon: "cil-list"
+  },
+  {
+    name: "SteppingStones",
+    url: "/SteppingStones",
     icon: "cil-list"
   }
   // {
