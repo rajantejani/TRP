@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from "@angular/core";
-import { SeriesInfoInterface } from "../../../../model/FeaturedInfoInterface copy";
+import { SeriesInfoInterface } from "../../../../model/SeriesInfoInterface";
 
 @Component({
   selector: "app-series-list-form",
