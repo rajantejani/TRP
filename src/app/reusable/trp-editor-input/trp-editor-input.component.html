@@ -1,0 +1,21 @@
+<div class="trp-editor-input-wrp">
+    <div *ngIf="editorValue" class="trp-editor-input-render" [innerHTML]="editorValue | safeHtml"></div>
+    <div *ngIf="!editorValue" class="trp-editor-input-render placeholder">{{placeholder}}</div>
+    <div class="idva-taskbar-icon"><i class="cil-pencil" (click)="openEditor()"></i></div>
+</div>
+<div bsModal #myModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl custom-modal modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <app-draggable-modal [left]="30" [top]="0" [small]="true">
+                <div class="modal-body">
+                    <button type="button" class="close" (click)="myModal.hide()" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <app-trp-head [headTitle]="'Editor'"></app-trp-head>
+                    <angular-editor [(ngModel)]="editorValue" [config]="config"> </angular-editor>
+                </div>
+            </app-draggable-modal>
+        </div>
+    </div>
+</div>

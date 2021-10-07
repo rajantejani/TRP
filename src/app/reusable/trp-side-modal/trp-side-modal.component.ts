@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 
 @Component({
   selector: "app-trp-side-modal",
@@ -6,6 +6,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./trp-side-modal.component.scss"]
 })
 export class TrpSideModalComponent implements OnInit {
+  @Input() open: boolean;
   constructor() {}
 
   ngOnInit(): void {}

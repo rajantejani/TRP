@@ -10,6 +10,7 @@ import { EditorialInterface } from "../../../model/EditorialInterface";
 })
 export class TrpEditorialComponent implements OnInit {
   @Input() editorialInfo: EditorialInterface;
+  @Input() full: boolean | undefined;
   config: AngularEditorConfig = editorConfig;
 
   constructor() {}

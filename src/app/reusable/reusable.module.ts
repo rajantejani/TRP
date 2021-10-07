@@ -12,6 +12,10 @@ import { TrpEditorialComponent } from "./trp-editorial/trp-editorial.component";
 import { AngularEditorModule } from "@kolkov/angular-editor";
 import { HttpClientModule } from "@angular/common/http";
 import { TrpSideModalComponent } from "./trp-side-modal/trp-side-modal.component";
+import { TrpFromListItemComponent } from "./trp-from-list-item/trp-from-list-item.component";
+import { TrpEditorInputComponent } from "./trp-editor-input/trp-editor-input.component";
+import { SafeHtmlModule } from "./trp-editor-input/sanitize-html.module";
+import { TrpContributerCardComponent } from './trp-contributer-card/trp-contributer-card.component';
 
 @NgModule({
   declarations: [
@@ -21,9 +25,12 @@ import { TrpSideModalComponent } from "./trp-side-modal/trp-side-modal.component
     TrpFeaturedComponent,
     TrpContributorComponent,
     TrpEditorialComponent,
-    TrpSideModalComponent
+    TrpFromListItemComponent,
+    TrpSideModalComponent,
+    TrpEditorInputComponent,
+    TrpContributerCardComponent
   ],
-  imports: [CommonModule, ReusableRoutingModule, FormsModule, ModalModule.forRoot(), AngularEditorModule, HttpClientModule],
+  imports: [CommonModule, ReusableRoutingModule, FormsModule, ModalModule.forRoot(), AngularEditorModule, HttpClientModule, SafeHtmlModule],
   exports: [
     BannerSelectionComponent,
     TrpHeadComponent,
@@ -31,6 +38,8 @@ import { TrpSideModalComponent } from "./trp-side-modal/trp-side-modal.component
     TrpFeaturedComponent,
     TrpContributorComponent,
     TrpEditorialComponent,
+    TrpFromListItemComponent,
+    TrpEditorInputComponent,
     TrpSideModalComponent
   ]
 })

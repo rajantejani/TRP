@@ -47,15 +47,15 @@
             Bio
         </div>
         <div class="col-8">
-            <textarea type="text" [(ngModel)]="contributerInfo.bio" name="bio" class="form-control" placeholder="Bio"
-                rows="3"></textarea>
+            <textarea type="text" [disabled]="true" [(ngModel)]="contributerInfo.bio" name="bio" class="form-control"
+                placeholder="Bio" rows="3"></textarea>
         </div>
     </div>
     <div class=" trp-form-row row">
         <div class="col-4">
             Portrait
         </div>
-        <div class="col-8">
+        <div class="col-8 trp-featured-image-wrp">
             <div class="trp-featured-image">
                 <img src="https://firebasestorage.googleapis.com/v0/b/trp-mrk-frb-prod.appspot.com/o/giggles12.png?alt=media&token=66f43a7e-8eb9-4241-8137-4c4c274fcec4"
                     alt="">

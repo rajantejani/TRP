@@ -1,11 +1,5 @@
-<div class="trp-side-modal-wrp">
+<div class="trp-side-modal-wrp" [ngClass]="open?'active':''">
     <div class="trp-side-modal">
-        <div class="trp-side-modal-content">
-
-        </div>
-        <div class="trp-side-modal-buttons">
-            <button>Cancel</button>
-            <button>Add Series</button>
-        </div>
+        <ng-content></ng-content>
     </div>
 </div>

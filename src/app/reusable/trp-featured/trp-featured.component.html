@@ -10,7 +10,7 @@
     <div class="col-4">
       image:
     </div>
-    <div class="col-8">
+    <div class="col-8 trp-featured-image-wrp">
       <div class="trp-featured-image">
         <img
           src="https://firebasestorage.googleapis.com/v0/b/trp-mrk-frb-prod.appspot.com/o/giggles12.png?alt=media&token=66f43a7e-8eb9-4241-8137-4c4c274fcec4"
@@ -23,7 +23,7 @@
       Slogan:
     </div>
     <div class="col-8">
-      <input type="text" [(ngModel)]="featuredInfo.slogan" name="slogan" class="form-control" placeholder="Slogan">
+      <app-trp-editor-input [editorValue]="featuredInfo.slogan" [placeholder]="'Slogan'"></app-trp-editor-input>
     </div>
   </div>
   <div class=" trp-form-row row">
