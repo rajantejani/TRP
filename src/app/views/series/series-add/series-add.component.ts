@@ -39,17 +39,24 @@ export class SeriesAddComponent implements OnInit {
 
   feturedSeriesInfo: SeriesInfoInterface = {
     title: "",
-    Sequence: "",
+    sequence: "",
     image: "",
     seriesId: "",
     description: "",
     country: "",
     language: "",
-    SKU: "",
+    sku: "",
     synopsis: "",
     product: "",
-    episodes: [],
-    partners: [{ function: "", id: "", firstName: "", lastName: "", companyName: "", bio: "" }]
+    episodes: [
+      { sequence: "", title: "", episodeId: "", titleId: "", image: "", isbn: "", description: "", sypnosis: "", product: "" },
+      { sequence: "", title: "", episodeId: "", titleId: "", image: "", isbn: "", description: "", sypnosis: "", product: "" },
+      { sequence: "", title: "", episodeId: "", titleId: "", image: "", isbn: "", description: "", sypnosis: "", product: "" }
+    ],
+    partners: [
+      { function: "", id: "", firstName: "", lastName: "", companyName: "", bio: "" },
+      { function: "", id: "", firstName: "", lastName: "", companyName: "", bio: "" }
+    ]
   };
 
   constructor(private cd: ChangeDetectorRef) {}

@@ -1,1 +1,130 @@
-<p>book-form works!</p>
+<div class="trp-banner">
+    <app-trp-head [headTitle]="'Featured Titles'">
+        <div class="idva-taskbar-icon"><i class="cil-plus" (click)="open=true"></i></div>
+    </app-trp-head>
+    <div class="trp-form-list trp-box">
+        <app-trp-from-list-item></app-trp-from-list-item>
+        <app-trp-from-list-item></app-trp-from-list-item>
+        <app-trp-from-list-item></app-trp-from-list-item>
+    </div>
+</div>
+<app-trp-side-modal [open]="open">
+    <div class="trp-side-modal-content">
+        <app-trp-head [headTitle]="'Add Title'">
+            <div class="idva-taskbar-icon"><i class="cil-search"></i></div>
+        </app-trp-head>
+        <div class="trp-featured trp-box">
+            <div class=" trp-form-row row">
+                <div class="col-4">
+                    Sequence:
+                </div>
+                <div class="col-8">
+                    <input type="text" [(ngModel)]="feturedSeriesInfo.sequence" [disabled]="true" name="sequence"
+                        class="form-control" placeholder="Sequence">
+                </div>
+            </div>
+            <div class=" trp-form-row row">
+                <div class="col-4">
+                    Title:
+                </div>
+                <div class="col-8">
+                    <input type="text" [(ngModel)]="feturedSeriesInfo.title" [disabled]="true" name="title"
+                        class="form-control" placeholder="Title">
+                </div>
+            </div>
+            <div class=" trp-form-row row">
+                <div class="col-4">
+                    Image:
+                </div>
+                <div class="col-8 trp-featured-image-wrp">
+                    <div class="trp-featured-image">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/trp-mrk-frb-prod.appspot.com/o/giggles12.png?alt=media&token=66f43a7e-8eb9-4241-8137-4c4c274fcec4"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+            <div class=" trp-form-row row">
+                <div class="col-4">
+                    Description:
+                </div>
+                <div class="col-8">
+                    <input type="text" [disabled]="true" [(ngModel)]="feturedSeriesInfo.description" name="description"
+                        class="form-control" placeholder="description">
+                </div>
+            </div>
+            <div class=" trp-form-row row">
+                <div class="col-4">
+                    Languge:
+                </div>
+                <div class="col-8">
+                    <input type="text" [disabled]="true" [(ngModel)]="feturedSeriesInfo.language" name="language"
+                        class="form-control" placeholder="language">
+                </div>
+            </div>
+            <div class=" trp-form-row row">
+                <div class="col-4">
+                    SKU:
+                </div>
+                <div class="col-8">
+                    <input type="text" [disabled]="true" [(ngModel)]="feturedSeriesInfo.sku" name="sku"
+                        class="form-control" placeholder="sku">
+                </div>
+            </div>
+            <div class=" trp-form-row row">
+                <div class="col-4">
+                    Synopsis:
+                </div>
+                <div class="col-8">
+                    <input type="text" [disabled]="true" [(ngModel)]="feturedSeriesInfo.synopsis" name="synopsis"
+                        class="form-control" placeholder="synopsis">
+                </div>
+            </div>
+            <div class=" trp-form-row row">
+                <div class="col-4">
+                    Product:
+                </div>
+                <div class="col-8">
+                    <input type="text" [(ngModel)]="feturedSeriesInfo.product" name="product" class="form-control"
+                        placeholder="Insert Link Here">
+                </div>
+            </div>
+            <ng-container *ngFor="let partner of feturedSeriesInfo.partners">
+                <div class=" trp-form-row row">
+                    <div class="col-12">
+                        Partner:
+                    </div>
+                </div>
+                <div class=" trp-form-row row">
+                    <div class="col-6">
+                        <input type="text" [disabled]="true" [(ngModel)]="partner.function" name="function"
+                            class="form-control" placeholder="Funtion">
+                    </div>
+                    <div class="col-6">
+                        <input type="text" [disabled]="true" [(ngModel)]="partner.id" name="id" class="form-control"
+                            placeholder="Id">
+                    </div>
+                </div>
+                <div class=" trp-form-row row">
+                    <div class="col-6">
+                        <input type="text" [disabled]="true" [(ngModel)]="partner.firstName" name="firstName"
+                            class="form-control" placeholder="First Name">
+                    </div>
+                    <div class="col-6">
+                        <input type="text" [disabled]="true" [(ngModel)]="partner.lastName" name="lastName"
+                            class="form-control" placeholder="Last Name">
+                    </div>
+                </div>
+                <div class=" trp-form-row row">
+                    <div class="col-6">
+                        <input type="text" [disabled]="true" [(ngModel)]="partner.companyName" name="companyName"
+                            class="form-control" placeholder="Company Name">
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+    <div class="trp-side-modal-buttons">
+        <button (click)="open=false">Cancel</button>
+        <button (click)="open=false">Add Book</button>
+    </div>
+</app-trp-side-modal>

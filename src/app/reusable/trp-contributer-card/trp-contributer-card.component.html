@@ -1,1 +1,20 @@
-<p>trp-contributer-card works!</p>
+<li class="trp-list-item">
+    <div class="trp-list-item-left">
+        <div class="trp-list-item-img">
+            <img src="https://cdn11.bigcommerce.com/s-639i6n96hu/product_images/uploaded_images/ss10-thumbnail.png"
+                alt="thumbnail">
+        </div>
+        <div class="trp-list-item-info">
+            <h2>First Name Last Name</h2>
+            <p>Description</p>
+        </div>
+    </div>
+    <div class="trp-list-item-right">
+        <div>
+            <input class="tgl tgl-light" (change)="selectFeatureSeries(i)" [checked]="featuredSeries===i"
+                [attr.name]="'series-feature' + i" [attr.id]="'series-feature' + i" type="checkbox" />
+            <label class="tgl-btn" [attr.for]="'series-feature' + i"></label>
+        </div>
+        <a class="idva-taskbar-icon" [routerLink]="['/series/add']"><i class="cil-eye"></i></a>
+    </div>
+</li>

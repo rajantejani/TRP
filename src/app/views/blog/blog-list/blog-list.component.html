@@ -1,6 +1,6 @@
 <div class="trp-main-container">
     <div class="idva-taskbar">
-        <div class="row">
+        <div class="row idva-align">
             <div class="col-3 idva-flex">
                 <h1 class="trp-title">
                     Blog List
@@ -24,7 +24,7 @@
                             alt="thumbnail">
                     </div>
                     <div class="trp-list-item-info">
-                        <h2>WHAT'S NEXT?</h2>
+                        <h2>TITLE</h2>
                         <p>Giggles and Grins</p>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                             [attr.name]="'series-feature' + i" [attr.id]="'series-feature' + i" type="checkbox" />
                         <label class="tgl-btn" [attr.for]="'series-feature' + i"></label>
                     </div>
-                    <a class="idva-taskbar-icon" [routerLink]="['/series/add']"><i class="cil-eye"></i></a>
+                    <a class="idva-taskbar-icon" [routerLink]="['/blog/add']"><i class="cil-eye"></i></a>
                 </div>
             </li>
         </ul>

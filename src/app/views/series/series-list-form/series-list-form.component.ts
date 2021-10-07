@@ -8,7 +8,7 @@ import { SeriesInfoInterface } from "../../../../model/SeriesInfoInterface";
 })
 export class SeriesListFormComponent implements OnInit {
   @Input() feturedSeriesInfo: SeriesInfoInterface;
-
+  open: boolean = false;
   constructor() {}
 
   ngOnInit(): void {}

@@ -7,7 +7,7 @@ import { AppBreadcrumbModule } from "@coreui/angular";
 import { FormsModule } from "@angular/forms";
 import { SeriesAddComponent } from "./series-add/series-add.component";
 import { ReusableModule } from "../../reusable/reusable.module";
-import { SeriesListFormComponent } from './series-list-form/series-list-form.component';
+import { SeriesListFormComponent } from "./series-list-form/series-list-form.component";
 
 @NgModule({
   declarations: [SeriesListComponent, SeriesAddComponent, SeriesListFormComponent],
